@@ -10,7 +10,12 @@ namespace Assignment2
     {
         static void Main()
         {
-            Console.WriteLine("hello");
+            Console.Write("enter sentence to split: ");
+            var result = new WordFrequency().GetWordFrequency(Console.ReadLine());
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.Key}:{item.Value}");
+            }
         }
     }
 }
